@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Task1Test",
+      "setup": "",
+      "run": "node Task1.js",
+      "input": "",
+      "output": "4 + 6i\r\n14 + 20i\r\n5 + 2i\r\n4 + 6i\r\n14 + 20i\r\n5 + 2i",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Task2Test",
+      "setup": "",
+      "run": "node Task2.js",
+      "input": "",
+      "output": "6 , 15i\r\n-2 , -5i",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
