@@ -4,11 +4,13 @@ let ComplexNumberPrototype = {
     /*
     Add the two properties to represent the real and imaginary parts of the complex number
     */
+   real:0,
+   imaginary:0,
 
      print: function()
      {
          // Please replace the comments with the numberic values only, don't change the printed string because it'll be used for testing
-         console.log(/*refer to the real part*/ +" + " + /*refer to the imagenary part*/ + "i");
+         console.log(this.real +" + " + this.imaginary + "i");
      }
    };
 
@@ -19,7 +21,10 @@ let ComplexNumberPrototype = {
 
 function createComplexNumber (real,imaginary)
 {
-  
+  let comnum = Object.create(ComplexNumberPrototype);
+  comnum.real = real;
+  comnum.imaginary = imaginary;
+  return comnum;
 }
 
 
@@ -35,6 +40,8 @@ c1.print();
 //to create complex number objects that would work the same way
 function ComplexNumber(real, imaginary)
 {
+    this.real=real;
+    this.imaginary=imaginary;
 
     this.print = function()
         {         
@@ -44,9 +51,9 @@ function ComplexNumber(real, imaginary)
 };
 
 // call the constructor function three times to create three complex numbers with simialr values used with 'c1'
-let c2;  // use the constructor function to create the first number
+let c2 = new ComplexNumber(4,6);  // use the constructor function to create the first number
 c2.print();
-c2; // use the constructor function to create the second number
+c2 = new ComplexNumber(14,20); // use the constructor function to create the second number
 c2.print();
-c2; // use the constructor function to create the thrird number
+c2 = new ComplexNumber(5,2); // use the constructor function to create the thrird number
 c2.print();
