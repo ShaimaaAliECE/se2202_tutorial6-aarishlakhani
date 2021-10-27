@@ -31,8 +31,8 @@ function ComplexNumber(real, imaginary)
         /*
             Similar to the add method but the subtract operatin applied
         */
-       this.real= this.real - theOtherComplexNumber.real;
-       this.imaginary= this.imaginary -theOtherComplexNumber.imaginary;
+       this.real= theOtherComplexNumber.real - this.real;
+       this.imaginary= theOtherComplexNumber.imaginary - this.imaginary;
        return new ComplexNumber(this.real, this.imaginary);
     };
 
